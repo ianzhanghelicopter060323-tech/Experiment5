@@ -19,3 +19,25 @@
 删除Object类的无参构造函数，观察结果
 5. 删除Box类的拷贝构造函数，观察构造函数调用情况变化
 
+# geo.cpp
+1. 定义一个基类```Shape```，在此基础上派生出```Rectangle```和```Circle```，二者都有```getArea()```函数计算对象的面积并输出。
+2. 尝试```getArea```为普通成员函数（上机5基础）
+3. 尝试```getArea```为虚函数（上机5附加，上机6基础）
+4. 尝试```getArea```为纯虚函数（上机5附加，上机6基础）
+5. 编程一下```main```函数测试：
+```cpp
+    int main()
+    {
+        Shape * p;
+        Shape s;
+        Rectangle r(4,5);
+        Circle c(2);
+        
+        p = &s;
+        p->getArea();
+        p = &r;
+        p->getArea();
+        p = &c;
+        p->getArea();
+    }
+```
